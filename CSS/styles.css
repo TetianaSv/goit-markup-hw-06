@@ -15,6 +15,14 @@ ul {
   margin: 0px;
   padding: 0px;
 }
+h3 {
+  margin: 0;
+}
+.form-field input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+}
 :root {
   --main-text: #212121;
   --white-text: #ffffff;
@@ -227,11 +235,14 @@ header .auth-item:focus {
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
-.close-modal-button {
+.modal-close-button {
   position: absolute;
+  right: 0;
+  top: 0;
   width: 30px;
   height: 30px;
-  outline: none;
+  border: none;
+  transform: translateX(30%) translateY(-30%);
   border-radius: 50%;
   background: #ffffff;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -241,6 +252,55 @@ header .auth-item:focus {
   width: 11px;
   height: 11px;
 }
+.modal-title {
+  margin: 0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+}
+.input-area {
+  margin-top: 30px;
+}
+.form-field {
+  position: relative;
+  margin-bottom: 28px;
+  width: 448px;
+  display: flex;
+  flex-direction: column;
+}
+.modal-label {
+  position: absolute;
+  /* display: block; */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+}
+/* .modal-label div {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+} */
+
+/* .modal-icon {
+  position: absolute;
+} */
+.modal-input:focus + .modal-label {
+  color: #2196f3;
+  fill: #2196f3;
+}
+/* .modal-input:focus {
+  border: 1px solid #2196f3;
+} */
 /* CHARACTERISTICS SECTION*/
 .feature {
   padding-top: 94px;
@@ -314,9 +374,6 @@ header .auth-item:focus {
   margin-left: auto;
   margin-right: auto;
 }
-.act-list {
-  position: relative;
-}
 .act-list:not(:last-child) {
   margin-right: 30px;
 }
@@ -325,7 +382,6 @@ header .auth-item:focus {
 }
 .act-item {
   display: block;
-  position: absolute;
   width: 100%;
   left: 0;
   bottom: 0;
@@ -346,6 +402,7 @@ header .auth-item:focus {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+
 /* OUR TEAM SECTION*/
 .team-main {
   padding-top: 94px;
@@ -423,9 +480,7 @@ header .auth-item:focus {
 .customer {
   padding-top: 94px;
 }
-/* .customer svg {
-  fill: #afb1b8;
-} */
+
 .customers-main {
   display: flex;
   justify-content: space-between;
